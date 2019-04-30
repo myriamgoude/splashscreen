@@ -64,6 +64,11 @@ a{
     color:#300;
     position:relative;
     text-decoration: none;
+    margin-right:2rem;
+}
+
+a:last-child{
+    margin-right:0;
 }
 
 a:before {
