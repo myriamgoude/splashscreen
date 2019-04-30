@@ -1,0 +1,164 @@
+@font-face { 
+    font-family: 'Bebas Neue';
+    src: url('fonts/BebasNeue-Regular.eot'); /* IE9 Compat Modes */
+    src: url('fonts/BebasNeue-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/BebasNeue-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/BebasNeue-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/BebasNeue-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+ } 
+
+
+*{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+html{
+    color: #330000;
+    font-family: 'Bebas Neue', 'Source Sans Pro', sans-serif;
+    background-color: #F7F7F7;
+}
+h1{ 
+    font-family:'Bebas Neue';
+    color: rgba(55,0,0,1);
+    font-size: 8rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+h2{
+    font-family:'Source Sans Pro';
+    color: rgba(55,0,0,1);
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+    margin: 5rem 0 0 0;
+}
+
+h3{
+    font-family:'Source Sans Pro';
+    color: rgba(155,155,155,1);
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: center;
+    margin: 1rem 0 0 0;
+}
+
+.links {
+    margin:3rem auto;
+    text-align:center;
+}
+
+a{  
+    color:#300;
+    position:relative;
+    text-decoration: none;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #CCCC00;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+
+a:hover{
+    transition: all linear 0.2s;
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+.wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.circle {
+    margin: 10px auto;
+    background-color:white;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    box-shadow:2px 0 15px #EEE;
+}
+
+/*coffee cup*/
+.coffee_cup{
+    width: 40px;
+    height: 48px;
+    border: 4px rgba(155,50,50,1) solid;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    top:48px;
+    left:-5px;
+    margin: 30px auto;
+}
+.coffee_cup:after, .coffee_cup:before{
+    position: absolute;
+    content: "";
+}
+.coffee_cup:after{
+    width: 10px;
+    height: 25px;
+    border: 4px rgba(155,50,50,1) solid;
+    border-left: none;
+    border-radius: 0px 20px 20px 0px;
+    left: 40px;
+}
+.coffee_cup:before{
+    width: 2px;
+    height: 12px;
+    background-color: rgba(155,155,155,1);
+    top: -16px;
+    left: 10px;
+    box-shadow: 5px 0px 0px 0px rgba(155,155,155,1),
+                5px -5px 0px 0px rgba(155,155,155,1),
+                10px 0px 0px 0px rgba(155,155,155,1);
+    -webkit-animation: steam 1s linear infinite alternate;
+       -moz-animation: steam 1s linear infinite alternate;
+            animation: steam 1s linear infinite alternate;
+}
+
+@-webkit-keyframes steam{
+    0%{height: 6px;}
+    100%{height: 0px;}            
+}
+@-moz-keyframes steam{
+    0%{height: 6px}
+    100%{height: 0px;}            
+}
+@keyframes steam{
+    0%{height: 6px}
+    100%{height: 0px;}            
+}
